@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Calcular Kg</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+
+input {
+  width: 100px;
+}
+
+button {
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<input type="text" placeholder="Valor" id="valor">
+<input type="text" placeholder="Gramas" id="gramas">
+<button onclick="calcular()">Calcular</button>
+
+<input type="text" id="preco-por-quilo" disabled>
+
+<script>
+function calcular() {
+  var valor = document.getElementById("valor").value;
+  var gramas = document.getElementById("gramas").value;
+
+  var precoPorQuilo = valor / gramas * 1000;
+
+  document.getElementById("preco-por-quilo").value = precoPorQuilo;
+}
+</script>
+</body>
+</html>
